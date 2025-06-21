@@ -1,0 +1,329 @@
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  scroll-behavior: smooth;
+}
+body { font-family: Arial, sans-serif; color: #333; }
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background: url('./IMGS/bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(3 3 3 / 70%);
+}
+.hero-content {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 0 1rem;
+}
+.hero-content h1 {
+  font-size: 2.9rem;
+  line-height: 1.4;
+}
+.hero-content .highlight {
+  color: #FFC107;
+}
+
+.case-study {
+  position: relative;
+  padding-top: 2.5rem; /* space for overlap */
+}
+
+.stats {
+  width: 100%;
+  max-width: 70%;
+  display: flex;
+  justify-content: space-around;
+  background: #ffffff;
+  padding: 1rem 1rem;
+}
+.stat-item {
+  text-align: center;
+}
+.stat-item h2 {
+  font-size: 2.5rem;
+  color: #4A148C;
+  margin-bottom: 0.25rem;
+}
+.stat-item p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.card {
+  position: absolute;
+  top: 80%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 300px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 7px 6px 12px 0px rgba(0 0 0 / 87%);
+  padding: 1.5rem;
+}
+.card .logo {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.card .logo img {
+  max-width: 270px;
+  width: 251px;
+  height: 50px;
+}
+.card dl {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #555;
+}
+.card dt {
+  font-weight: bold;
+  margin-top: 0.75rem;
+}
+.card dd {
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+}
+
+.story-container { 
+    display: flex; 
+    max-width: 1200px; 
+    margin: 2rem auto; 
+    padding: 0 1rem; 
+}
+.sidebar {
+  flex: 0 0 250px; 
+  position: sticky; 
+  top: 100px;
+  padding-right: 1.5rem;
+}
+.sidebar h3 { 
+    font-size: 1.2rem; 
+    margin-bottom: .75rem; 
+}
+.sidebar ul { 
+    list-style: none; 
+}
+.sidebar ul li { 
+    margin-bottom: .5rem; 
+}
+.sidebar ul li ul { 
+    margin-left: .75rem; 
+    margin-top: .25rem; 
+}
+.sidebar a { 
+    text-decoration: none; 
+    color: #000000; 
+    font-size: .95rem; 
+}
+.sidebar a:hover { 
+    text-decoration: underline; 
+}
+.talk-sales-btn {
+  display: inline-block; 
+  color: #ffffff !important;
+  margin-top: 1.2rem; 
+  padding: 0.8rem 1rem;
+  background: #1976D2; 
+  border-radius: 1.3rem; 
+  font-size: .95rem;
+  text-decoration: none;
+}
+.talk-sales-btn:hover { 
+    background: #115293; 
+}
+
+.story-content { 
+    flex: 1; 
+    margin-top: 11%;
+}
+.story-content section { 
+    margin-bottom: 2rem; 
+}
+.story-content h2 { 
+    font-size: 1.75rem; 
+    margin-bottom: .75rem; 
+}
+.story-content blockquote {
+  border-left: 4px solid #1976D2; 
+  padding-left: 1rem; 
+  margin-bottom: 1rem;
+  color: #555; 
+  font-style: italic;
+}
+.story-content p { 
+    margin-bottom: 1rem; 
+}
+.story-content img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin-top: 1rem; 
+}
+
+.challenge-list {
+  margin-top: 2rem;
+}
+
+.challenge-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.challenge-item .icon {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  background: #4A148C;
+  /* Creates the arrow/hexagon shape */
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  margin-right: 1rem;
+}
+
+.challenge-item .text h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.challenge-item .text p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+
+.solution-section {
+  margin-top: 3rem;
+}
+.solution-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.solution-intro {
+  list-style: disc inside;
+  margin: 0.5rem 0 1.5rem 0;
+  padding-left: 1rem;
+}
+.solution-intro li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+.solution-section h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 1.5rem;
+}
+.solution-item {
+  background: #f0f0f8;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+.solution-item .icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 0.75rem;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  /* replace with real SVG background or font-icon */
+}
+/* Example placeholder icons via pseudo-content */
+.icon-lead::after { content: "📈"; }
+.icon-permission::after { content: "⚖️"; }
+.icon-handover::after { content: "📝"; }
+.icon-docs::after { content: "📂"; }
+.solution-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.solution-item p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+.solution-item ul {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  list-style: disc inside;
+}
+
+/* Impact section */
+.impact-section {
+  margin: 3rem 0;
+}
+.impact-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.impact-section p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+.impact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.impact-text {
+  flex: 1 1 300px;
+}
+.impact-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.impact-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #4A148C;
+  line-height: 1;
+}
+.impact-label {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+.impact-list {
+  list-style: disc inside;
+  color: #555;
+}
+.impact-list li {
+  margin-bottom: 0.5rem;
+}
+.impact-image {
+  flex: 1 1 300px;
+}
+.impact-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
