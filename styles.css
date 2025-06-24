@@ -97,8 +97,8 @@ body { font-family: Arial, sans-serif; color: #333; }
 .story-container { 
     display: flex; 
     max-width: 1200px; 
-    margin: 2rem auto; 
-    padding: 0 1rem; 
+    margin: 2.5rem auto; 
+    padding: 1rem 1rem; 
 }
 .sidebar {
   flex: 0 0 250px; 
@@ -151,17 +151,19 @@ body { font-family: Arial, sans-serif; color: #333; }
 }
 .story-content h2 { 
     font-size: 1.75rem; 
-    margin-bottom: .75rem; 
+    margin-bottom: 1.5rem; 
+    margin-top: 1.5rem;
 }
 .story-content blockquote {
   border-left: 4px solid #1976D2; 
   padding-left: 1rem; 
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: #555; 
   font-style: italic;
 }
 .story-content p { 
     margin-bottom: 1rem; 
+    margin-top: 1.5rem;
 }
 .story-content img { 
     width: 100%; 
@@ -171,41 +173,86 @@ body { font-family: Arial, sans-serif; color: #333; }
 }
 
 .challenge-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
 .challenge-item {
+  position: relative;
+  width: 100%;
+  padding: 2rem 3rem;
   display: flex;
   align-items: flex-start;
-  margin-bottom: 1.5rem;
-}
-
-.challenge-item .icon {
-  flex: 0 0 40px;
-  width: 40px;
-  height: 40px;
-  background: #4A148C;
-  /* Creates the arrow/hexagon shape */
+  /* hexagon clip-path */
   clip-path: polygon(
-    50% 0%,
-    100% 25%,
-    100% 75%,
-    50% 100%,
-    0% 75%,
-    0% 25%
+    5% 0%,
+    95% 0%,
+    100% 50%,
+    95% 100%,
+    5% 100%,
+    0% 50%
   );
-  margin-right: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* hover lift */
+.challenge-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* hide legacy icon */
+.challenge-item .icon {
+  display: none;
+}
+
+/* text container */
+.challenge-item .text {
+  flex: 1;
+}
+
+/* headings + paragraphs inherit color */
+.challenge-item .text h4,
+.challenge-item .text p {
+  margin-bottom: 0.5rem;
+  color: inherit;
+  line-height: 1.4;
+}
+
+/* ===========================
+   PURPLE-SHADE RAMP
+   =========================== */
+/* RGBA(74,20,140) = your base purple */
+.challenge-item:nth-child(1) {
+  background: rgba(74,20,140, 0.2);
+  color: #4A148C;
+}
+.challenge-item:nth-child(2) {
+  background: rgba(74,20,140, 0.4);
+  color: #fff;
+}
+.challenge-item:nth-child(3) {
+  background: rgba(74,20,140, 0.6);
+  color: #fff;
+}
+.challenge-item:nth-child(4) {
+  background: rgba(74,20,140, 0.8);
+  color: #fff;
+}
+.challenge-item:nth-child(5) {
+  background: rgba(74,20,140, 1.0);
+  color: #fff;
+}
+
+/* typography inside */
 .challenge-item .text h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
-
 .challenge-item .text p {
   font-size: 0.95rem;
-  color: #444;
-  line-height: 1.4;
 }
 
 
@@ -326,4 +373,129 @@ body { font-family: Arial, sans-serif; color: #333; }
   height: auto;
   display: block;
   border-radius: 4px;
+}
+
+
+/* ===========================
+   RESPONSIVE TABLET (≤1024px)
+   =========================== */
+@media (max-width: 1024px) {
+  /* Hero */
+  .hero {
+    height: 50vh;
+  }
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  /* Case study stats: narrower container */
+  .stats {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  /* Card: from absolute → static, stack below stats */
+  .card {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin: 2rem auto 0;
+  }
+
+  /* Story layout: switch to block flow */
+  .story-container {
+    display: block;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+  }
+  .sidebar {
+    display: none;
+    position: relative;
+    top: auto;
+    flex: none;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding-right: 0;
+  }
+  .talk-sales-btn {
+    display: block;
+    text-align: center;
+  }
+  .story-content {
+    margin-top: 0;
+  }
+}
+
+/* ===========================
+   RESPONSIVE MOBILE (≤768px)
+   =========================== */
+@media (max-width: 768px) {
+  /* Hero text smaller & padding */
+  .hero-content {
+    padding: 0 0.5rem;
+  }
+  .hero-content h1 {
+    font-size: 1.9rem;
+    line-height: 1.3;
+  }
+
+  /* Stats: stack vertically */
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stat-item {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* Sidebar → simple top nav */
+  .sidebar {
+    display: none;
+    overflow-x: auto;
+    background: #fafafa;
+    padding: 0.75rem;
+  }
+  .sidebar ul {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .sidebar ul li {
+    margin-right: 1rem;
+    white-space: nowrap;
+  }
+  .sidebar ul li ul {
+    display: none;
+  }
+  .sidebar h3 {
+    display: none;
+  }
+
+  /* Story content full width */
+  .story-content {
+    padding: 0 0.5rem;
+  }
+
+  /* Solution grid: single column */
+  .solution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Impact section: vertical stack */
+  .impact-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .impact-image,
+  .impact-text {
+    width: 100%;
+  }
+
+  /* Card padding reduction */
+  .card {
+    padding: 1rem;
+  }
+  .card .logo img {
+    max-width: 200px;
+  }
 }
