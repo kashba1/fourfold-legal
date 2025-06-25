@@ -36,7 +36,7 @@ body { font-family: Arial, sans-serif; color: #333; }
 
 .case-study {
   position: relative;
-  padding-top: 2.5rem; /* space for overlap */
+  padding-top: 2.5rem;
 }
 
 .stats {
@@ -49,7 +49,7 @@ body { font-family: Arial, sans-serif; color: #333; }
 }
 .stat-item {
   text-align: center;
-  box-shadow: 0px 0px 2px 0px #00000057;
+  box-shadow: 1px 1px 2px 1px #00000057;
   padding: 1rem;
   border-radius: 10px;
 }
@@ -100,21 +100,39 @@ body { font-family: Arial, sans-serif; color: #333; }
 .story-container { 
     display: flex; 
     max-width: 1200px; 
-    margin: 2.5rem auto; 
-    padding: 1rem 1rem; 
+    margin: 3rem auto; 
+    padding: 0 1rem; 
+    gap: 2rem;
+    align-items: flex-start;
 }
 .sidebar {
-  flex: 0 0 250px; 
-  position: sticky; 
-  top: 100px;
-  padding-right: 1.5rem;
+  width: 240px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  position: sticky;
+  top: 120px;
+  align-self: flex-start;
+  margin-right: 2.5rem;
+  height: fit-content;
+}
+
+.sidebar .divider {
+  border-top: 1px solid #e0e0e0;
+  margin: 1.5rem 0;
 }
 .sidebar h3 { 
     font-size: 1.2rem; 
-    margin-bottom: .75rem; 
+    margin-bottom: 1rem; 
 }
 .sidebar ul { 
     list-style: none; 
+    padding-left: 0%;
+    margin: 0;
 }
 .sidebar ul li { 
     margin-bottom: .5rem; 
@@ -128,18 +146,20 @@ body { font-family: Arial, sans-serif; color: #333; }
     color: #000000; 
     font-size: .95rem; 
 }
+
 .sidebar a:hover { 
-    text-decoration: underline; 
+    text-decoration: none;
+    color: #5e7c9a; 
 }
 .talk-sales-btn {
-  display: inline-block; 
+   display: inline-block;
   color: #ffffff !important;
-  margin-top: 1.2rem; 
+  background: #1976D2;
   padding: 0.8rem 1rem;
-  background: #1976D2; 
-  border-radius: 1.3rem; 
+  border-radius: 1.3rem;
   font-size: .95rem;
   text-decoration: none;
+  text-align: center;
 }
 .talk-sales-btn:hover { 
     background: #115293; 
@@ -161,7 +181,7 @@ body { font-family: Arial, sans-serif; color: #333; }
   border-left: 4px solid #1976D2; 
   padding-left: 1rem; 
   margin-bottom: 1.5rem;
-  color: #555; 
+  color: #817f7f; 
   font-weight: 600;
 }
 .story-content p { 
@@ -189,21 +209,23 @@ body { font-family: Arial, sans-serif; color: #333; }
 }
 .step:last-child { margin-bottom: 0; }
 .arrow {
-  width: 40px;
-  height: 80px;
+  width: 50px;
+  height: 100px;
   flex-shrink: 0;
   margin-right: 20px;
-  /* arrow shape */
   clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 55%,
-    60% 55%,
-    50% 100%,
-    40% 55%,
-    0 55%
+    50% 0%,   
+    100% 25%,  
+    100% 100%, 
+    50% 75%,   
+    0% 100%,   
+    0% 25%     
   );
+   transform: rotate(180deg);
+  margin: 20 auto;
+  display: block;
 }
+
 .shade1 { background: #8a2aa7; }
 .shade2 { background: #7c4bb3; }
 .shade3 { background: #9a64c0; }
@@ -219,7 +241,6 @@ body { font-family: Arial, sans-serif; color: #333; }
   color: #555;
 }
 
-/* Hover / active effect via JS */
 .step.active { opacity: 1; }
 .step:not(.active):hover { opacity: .7; }
     
@@ -236,7 +257,6 @@ body { font-family: Arial, sans-serif; color: #333; }
   padding: 2rem 3rem;
   display: flex;
   align-items: flex-start;
-  /* hexagon clip-path */
   clip-path: polygon(
     5% 0%,
     95% 0%,
@@ -248,23 +268,20 @@ body { font-family: Arial, sans-serif; color: #333; }
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* hover lift */
+
 .challenge-item:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* hide legacy icon */
 .challenge-item .icon {
   display: none;
 }
 
-/* text container */
 .challenge-item .text {
   flex: 1;
 }
 
-/* headings + paragraphs inherit color */
 .challenge-item .text h4,
 .challenge-item .text p {
   margin-bottom: 0.5rem;
@@ -272,10 +289,6 @@ body { font-family: Arial, sans-serif; color: #333; }
   line-height: 1.4;
 }
 
-/* ===========================
-   PURPLE-SHADE RAMP
-   =========================== */
-/* RGBA(74,20,140) = your base purple */
 .challenge-item:nth-child(1) {
   background: rgba(74,20,140, 0.2);
   color: #4A148C;
@@ -297,7 +310,6 @@ body { font-family: Arial, sans-serif; color: #333; }
   color: #fff;
 }
 
-/* typography inside */
 .challenge-item .text h4 {
   font-size: 1.2rem;
   font-weight: 600;
@@ -305,7 +317,6 @@ body { font-family: Arial, sans-serif; color: #333; }
 .challenge-item .text p {
   font-size: 0.95rem;
 }
-
 
 .solution-section {
   margin-top: 3rem;
@@ -349,9 +360,8 @@ body { font-family: Arial, sans-serif; color: #333; }
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  /* replace with real SVG background or font-icon */
 }
-/* Example placeholder icons via pseudo-content */
+
 .icon-lead::after { content: "📈"; }
 .icon-permission::after { content: "⚖️"; }
 .icon-handover::after { content: "📝"; }
@@ -372,7 +382,6 @@ body { font-family: Arial, sans-serif; color: #333; }
   list-style: disc inside;
 }
 
-/* Impact section */
 .impact-section {
   margin: 3rem 0;
 }
@@ -427,12 +436,7 @@ body { font-family: Arial, sans-serif; color: #333; }
   border-radius: 4px;
 }
 
-
-/* ===========================
-   RESPONSIVE TABLET (≤1024px)
-   =========================== */
 @media (max-width: 1024px) {
-  /* Hero */
   .hero {
     height: 50vh;
   }
@@ -440,13 +444,11 @@ body { font-family: Arial, sans-serif; color: #333; }
     font-size: 2.4rem;
   }
 
-  /* Case study stats: narrower container */
   .stats {
     max-width: 90%;
     padding: 1rem;
   }
 
-  /* Card: from absolute → static, stack below stats */
   .card {
     position: static;
     transform: none;
@@ -454,7 +456,6 @@ body { font-family: Arial, sans-serif; color: #333; }
     margin: 2rem auto 0;
   }
 
-  /* Story layout: switch to block flow */
   .story-container {
     display: block;
     margin: 1.5rem auto;
@@ -478,11 +479,7 @@ body { font-family: Arial, sans-serif; color: #333; }
   }
 }
 
-/* ===========================
-   RESPONSIVE MOBILE (≤768px)
-   =========================== */
 @media (max-width: 768px) {
-  /* Hero text smaller & padding */
   .hero-content {
     padding: 0 0.5rem;
   }
@@ -491,7 +488,6 @@ body { font-family: Arial, sans-serif; color: #333; }
     line-height: 1.3;
   }
 
-  /* Stats: stack vertically */
   .stats {
     flex-direction: column;
     align-items: center;
@@ -501,7 +497,6 @@ body { font-family: Arial, sans-serif; color: #333; }
     margin-bottom: 1rem;
   }
 
-  /* Sidebar → simple top nav */
   .sidebar {
     display: none;
     overflow-x: auto;
@@ -523,17 +518,14 @@ body { font-family: Arial, sans-serif; color: #333; }
     display: none;
   }
 
-  /* Story content full width */
   .story-content {
     padding: 0 0.5rem;
   }
 
-  /* Solution grid: single column */
   .solution-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Impact section: vertical stack */
   .impact-content {
     flex-direction: column;
     text-align: center;
@@ -543,8 +535,7 @@ body { font-family: Arial, sans-serif; color: #333; }
     width: 100%;
   }
 
-  /* Card padding reduction */
-  .card {
+ .card {
     padding: 1rem;
   }
   .card .logo img {
