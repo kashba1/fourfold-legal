@@ -27,7 +27,7 @@ body { font-family: Arial, sans-serif; color: #333; }
   padding: 0 1rem;
 }
 .hero-content h1 {
-  font-size: 2.9rem;
+  font-size: 3.1rem;
   line-height: 1.4;
 }
 .hero-content .highlight {
@@ -49,6 +49,9 @@ body { font-family: Arial, sans-serif; color: #333; }
 }
 .stat-item {
   text-align: center;
+  box-shadow: 0px 0px 2px 0px #00000057;
+  padding: 1rem;
+  border-radius: 10px;
 }
 .stat-item h2 {
   font-size: 2.5rem;
@@ -67,8 +70,8 @@ body { font-family: Arial, sans-serif; color: #333; }
   transform: translateY(-50%);
   width: 300px;
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 7px 6px 12px 0px rgba(0 0 0 / 87%);
+  border-radius: 20px;
+  box-shadow: 10px 11px 20px 0px rgba(0 0 0 / 87%);
   padding: 1.5rem;
 }
 .card .logo {
@@ -159,11 +162,12 @@ body { font-family: Arial, sans-serif; color: #333; }
   padding-left: 1rem; 
   margin-bottom: 1.5rem;
   color: #555; 
-  font-style: italic;
+  font-weight: 600;
 }
 .story-content p { 
     margin-bottom: 1rem; 
     margin-top: 1.5rem;
+    font-size: 1.1rem;
 }
 .story-content img { 
     width: 100%; 
@@ -172,6 +176,53 @@ body { font-family: Arial, sans-serif; color: #333; }
     margin-top: 1rem; 
 }
 
+.steps {
+  max-width: 700px;
+  margin-top: 2.5rem;
+}
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+.step:last-child { margin-bottom: 0; }
+.arrow {
+  width: 40px;
+  height: 80px;
+  flex-shrink: 0;
+  margin-right: 20px;
+  /* arrow shape */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 55%,
+    60% 55%,
+    50% 100%,
+    40% 55%,
+    0 55%
+  );
+}
+.shade1 { background: #8a2aa7; }
+.shade2 { background: #7c4bb3; }
+.shade3 { background: #9a64c0; }
+.shade4 { background: #b586c9; }
+
+.text h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+.text p {
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Hover / active effect via JS */
+.step.active { opacity: 1; }
+.step:not(.active):hover { opacity: .7; }
+    
 .challenge-list {
   display: flex;
   flex-direction: column;
@@ -364,6 +415,7 @@ body { font-family: Arial, sans-serif; color: #333; }
 }
 .impact-list li {
   margin-bottom: 0.5rem;
+  list-style: numbers;
 }
 .impact-image {
   flex: 1 1 300px;
