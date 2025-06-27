@@ -1,8 +1,3 @@
-Here’s a professional and clear `README.md` file generated based on your HTML and CSS structure for the **Fourfold Legal Case Study Webpage**:
-
----
-
-```markdown
 # Fourfold Legal Case Study Webpage
 
 This project showcases the transformation story of **Fourfold Legal Services**, highlighting how they achieved **2.5x business growth in just three months** using **Telecrm**. It is a responsive, static HTML/CSS webpage designed to present stats, challenges, solutions, and impact in a compelling, visual format.
@@ -69,16 +64,3 @@ _A visual section showing the Fourfold Legal office, part of the impact journey.
 - Add smooth scroll-to-section animation with JavaScript.
 - Enable dynamic content loading or CMS integration.
 - Implement mobile collapsible menu for the sidebar on small screens.
-
-## 📄 License
-
-This project is intended for demo or showcase purposes only. All trademarks and names are used for educational display and inspiration.
-
----
-
-Feel free to use and modify the template for your case studies or marketing pages.
-```
-
----
-
-Let me know if you also want the GitHub repo setup instructions or want it formatted in `.docx` or `.pdf`.
