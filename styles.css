@@ -28,8 +28,8 @@ body { font-family: Arial, sans-serif; color: #333; }
 }
 .hero-content h1 {
   font-size: 3.3rem;
-  line-height: 1.4;
-  padding-right: 13pc;
+  line-height: 1.2;
+  padding-right: 18cap;
 }
 .hero-content .highlight {
   color: #FFC107;
@@ -180,7 +180,7 @@ body { font-family: Arial, sans-serif; color: #333; }
     margin-top: 1.5rem;
 }
 .story-content blockquote {
-  border-left: 4px solid #1976D2; 
+  border-left: 4px solid #8a2aa7; 
   padding-left: 1rem; 
   margin-bottom: 1.5rem;
   color: #817f7f; 
