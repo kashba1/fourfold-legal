@@ -35,11 +35,6 @@ root/
 - **Overlay and Card Effects** using `box-shadow`, `clip-path`, and `sticky positioning`.
 - **Semantic HTML Structure** for improved readability and accessibility.
 
-## 📸 Preview
-
-> ![Preview Screenshot](./IMGS/fourfold.jpg)
-_A visual section showing the Fourfold Legal office, part of the impact journey._
-
 ## 🚀 How to Use
 
 1. Clone the repository or download the files.
