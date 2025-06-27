@@ -27,8 +27,9 @@ body { font-family: Arial, sans-serif; color: #333; }
   padding: 0 1rem;
 }
 .hero-content h1 {
-  font-size: 3.1rem;
+  font-size: 3.3rem;
   line-height: 1.4;
+  padding-right: 13pc;
 }
 .hero-content .highlight {
   color: #FFC107;
@@ -50,7 +51,7 @@ body { font-family: Arial, sans-serif; color: #333; }
 .stat-item {
   text-align: center;
   box-shadow: 1px 1px 2px 1px #00000057;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 10px;
 }
 .stat-item h2 {
@@ -106,7 +107,7 @@ body { font-family: Arial, sans-serif; color: #333; }
     align-items: flex-start;
 }
 .sidebar {
-  width: 240px;
+  width: 300px;
   background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
@@ -122,8 +123,9 @@ body { font-family: Arial, sans-serif; color: #333; }
 }
 
 .sidebar .divider {
-  border-top: 1px solid #e0e0e0;
-  margin: 1.5rem 0;
+  border-top: 1.5px solid #8a2aa7;
+  margin: 1.2rem 0;
+  color: #8a2aa7;
 }
 .sidebar h3 { 
     font-size: 1.2rem; 
@@ -154,7 +156,7 @@ body { font-family: Arial, sans-serif; color: #333; }
 .talk-sales-btn {
    display: inline-block;
   color: #ffffff !important;
-  background: #1976D2;
+  background: #8a2aa7;
   padding: 0.8rem 1rem;
   border-radius: 1.3rem;
   font-size: .95rem;
@@ -162,7 +164,7 @@ body { font-family: Arial, sans-serif; color: #333; }
   text-align: center;
 }
 .talk-sales-btn:hover { 
-    background: #115293; 
+    background: #5a1c6c; 
 }
 
 .story-content { 
@@ -408,7 +410,7 @@ body { font-family: Arial, sans-serif; color: #333; }
   margin-bottom: 0.5rem;
 }
 .impact-number {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #4A148C;
   line-height: 1;
@@ -442,6 +444,7 @@ body { font-family: Arial, sans-serif; color: #333; }
   }
   .hero-content h1 {
     font-size: 2.4rem;
+    padding-right: 9pc;
   }
 
   .stats {
@@ -462,14 +465,15 @@ body { font-family: Arial, sans-serif; color: #333; }
     padding: 0 1rem;
   }
   .sidebar {
-    display: none;
-    position: relative;
-    top: auto;
-    flex: none;
-    width: 100%;
-    margin-bottom: 1.5rem;
-    padding-right: 0;
-  }
+  position: sticky;
+  top: 100px;
+  flex: none;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding-right: 0;
+  display: block;
+}
+
   .talk-sales-btn {
     display: block;
     text-align: center;
@@ -484,7 +488,7 @@ body { font-family: Arial, sans-serif; color: #333; }
     padding: 0 0.5rem;
   }
   .hero-content h1 {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     line-height: 1.3;
   }
 
