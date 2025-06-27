@@ -27,9 +27,10 @@ body { font-family: Arial, sans-serif; color: #333; }
   padding: 0 1rem;
 }
 .hero-content h1 {
-  font-size: 3.3rem;
+  font-size: 3.0rem;
   line-height: 1.2;
-  padding-right: 18cap;
+  padding-right: 25cap;
+  margin-bottom: 6rem;
 }
 .hero-content .highlight {
   color: #FFC107;
@@ -66,7 +67,7 @@ body { font-family: Arial, sans-serif; color: #333; }
 
 .card {
   position: absolute;
-  top: 80%;
+  top: 60%;
   right: 5%;
   transform: translateY(-50%);
   width: 300px;
