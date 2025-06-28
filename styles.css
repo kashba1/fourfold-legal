@@ -116,7 +116,7 @@ body { font-family: Arial, sans-serif; color: #333; }
   padding: 1.25rem;
   font-size: 0.95rem;
   line-height: 1.6;
-  position: sticky;
+  /*position: sticky;*/
   top: 120px;
   align-self: flex-start;
   margin-right: 2.5rem;
