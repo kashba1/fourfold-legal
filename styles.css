@@ -159,9 +159,9 @@ body { font-family: Arial, sans-serif; color: #333; }
    display: inline-block;
   color: #ffffff !important;
   background: #5a1c6c;
-  padding: 0.8rem 1rem;
+  padding: 0.5rem 0.7rem;
   margin-right: 1rem;
-  border-radius: 0.2rem;
+  border-radius: 0.4rem;
 }
 .talk-sales-btn:hover { 
     background: #5a1c6c; 
@@ -228,10 +228,10 @@ body { font-family: Arial, sans-serif; color: #333; }
   display: block;
 }
 
-.shade1 { background: #8a2aa7; }
-.shade2 { background: #7c4bb3; }
-.shade3 { background: #9a64c0; }
-.shade4 { background: #b586c9; }
+.shade1 { background: #8A2AA7; }
+.shade2 { background: #7C4BB3; }
+.shade3 { background: #9A64C0; }
+.shade4 { background: #B586C9; }
 
 .text h3 {
   font-size: 1.1rem;
@@ -244,7 +244,7 @@ body { font-family: Arial, sans-serif; color: #333; }
 }
 
 .step.active { opacity: 1; }
-.step:not(.active):hover { opacity: .7; }
+/*.step:not(.active):hover { opacity: .8; }*/
     
 .challenge-list {
   display: flex;
