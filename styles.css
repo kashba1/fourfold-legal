@@ -161,7 +161,7 @@ body { font-family: Arial, sans-serif; color: #333; }
   background: #5a1c6c;
   padding: 0.8rem 1rem;
   margin-right: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
 }
 .talk-sales-btn:hover { 
     background: #5a1c6c; 
