@@ -158,10 +158,10 @@ body { font-family: Arial, sans-serif; color: #333; }
 .talk-sales-btn {
    display: inline-block;
   color: #ffffff !important;
-  background: #8a2aa7;
+  background: #5a1c6c;
   padding: 0.8rem 1rem;
   margin-right: 1rem;
-  border-radius: 1.3rem;
+  border-radius: 0.5rem;
 }
 .talk-sales-btn:hover { 
     background: #5a1c6c; 
